@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 export const DisplayFormikState = props =>
   <div style={{ margin: '1rem 0' }}>
     <h3 style={{ fontFamily: 'monospace' }} />
@@ -10,8 +10,7 @@ export const DisplayFormikState = props =>
         padding: '.5rem',
       }}
     >
-      <strong>props</strong> ={' '}
-      {JSON.stringify(props, null, 2)}
+      <strong>props</strong> = {JSON.stringify(props, null, 2)}
     </pre>
   </div>;
 
@@ -21,31 +20,16 @@ export const MoreResources = props =>
     <h3>More Examples</h3>
     <ul>
       <li>
-        <a
-          href="https://codesandbox.io/s/q8yRqQMp"
-          target="_blank"
-          rel="noopener"
-        >
-          Synchronous validation
-        </a>
+        <Link to="/">Basic</Link>
       </li>
       <li>
-        <a
-          href="https://codesandbox.io/s/qJR4ykJk"
-          target="_blank"
-          rel="noopener"
-        >
-          Building your own custom inputs
-        </a>
+        <Link to="/sync">Synchronous validation</Link>
       </li>
       <li>
-        <a
-          href="https://codesandbox.io/s/jRzE53pqR"
-          target="_blank"
-          rel="noopener"
-        >
-          3rd-party input components: React-select
-        </a>
+        <Link to="/custom">Building your own custom inputs</Link>
+      </li>
+      <li>
+        <Link to="/select">3rd-party input components: React-select</Link>
       </li>
       <li>
         <a
@@ -62,14 +46,11 @@ export const MoreResources = props =>
           target="_blank"
           rel="noopener"
         >
-          Accessing Lifecyle Methods (resetting a form
-          externally)
+          Accessing Lifecyle Methods (resetting a form externally)
         </a>
       </li>
     </ul>
-    <h3 style={{ marginTop: '1rem' }}>
-      Additional Resources
-    </h3>
+    <h3 style={{ marginTop: '1rem' }}>Additional Resources</h3>
     <ul>
       <li>
         <a
